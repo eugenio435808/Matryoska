@@ -1,0 +1,24 @@
+public class Matryoshka {
+	Matryoshka innerDoll;
+	//constructor for no inner doll
+	public Matryoshka(){
+		innerDoll = null;
+		}
+	//constructor for an inner doll
+	public Matryoshka(Matryoshka innerDoll){
+		this.innerDoll = innerDoll;
+		}
+	//does this object have an inner doll
+	public boolean hasInnerDoll(){
+		return innerDoll != null;
+		}
+	//determines how many dolls are in this shit
+	public int howManyDolls(){
+		//base case
+		if (!hasInnerDoll()){
+			return 1;
+			}
+		//recursive case
+		return 1 + innerDoll.howManyDolls();
+		}
+	}
