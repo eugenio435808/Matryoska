@@ -1,12 +1,21 @@
 public class Matryoshka {
 	Matryoshka innerDoll;
+	Matryoshka babushka;
+	Matryoshka Name;
+	private java.awt.Color hair;
+	
 	//constructor for no inner doll
 	public Matryoshka(){
 		innerDoll = null;
-		}
+		babushka = null;
+		Name = null;
+	}
 	//constructor for an inner doll
-	public Matryoshka(Matryoshka innerDoll){
+	public Matryoshka(Matryoshka innerDoll, Matryoshka babushka, Matryoshka Name, java.awt.Color hair){
 		this.innerDoll = innerDoll;
+		this.babushka = babushka;
+		this.Name = Name;
+		this.hair = hair;
 		}
 	//does this object have an inner doll
 	public boolean hasInnerDoll(){
@@ -20,5 +29,19 @@ public class Matryoshka {
 			}
 		//recursive case
 		return 1 + innerDoll.howManyDolls();
-		}
 	}
+	
+	public boolean wearingBabushka(){
+		return true;
+	}
+	
+	public int howManyWearingBabushkas(){
+		if(!wearingBabushka()){
+			return 1;
+		}
+		return 1 + babushka.howManyDolls();
+	}
+	public boolean isRedhead(){
+		return 
+	}
+}
