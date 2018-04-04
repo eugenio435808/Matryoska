@@ -21,7 +21,7 @@ public class Matryoshka {
 	public boolean hasInnerDoll(){
 		return innerDoll != null;
 		}
-	//determines how many dolls are in this shit
+	//determines how many dolls are in this
 	public int howManyDolls(){
 		//base case
 		if (!hasInnerDoll()){
@@ -42,6 +42,8 @@ public class Matryoshka {
 		return 1 + babushka.howManyDolls();
 	}
 	public boolean isRedhead(){
-		return 
+		return true;
 	}
+	public String Name(){
+		return Name;
 }
